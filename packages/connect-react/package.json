@@ -1,6 +1,6 @@
 {
   "name": "@mariczne/pd-connect-react",
-  "version": "1.3.2-certifier",
+  "version": "1.4.0-certifier",
   "description": "Pipedream Connect library for React",
   "files": [
     "dist"
