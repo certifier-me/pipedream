@@ -127,10 +127,14 @@ export function RemoteOptionsContainer({ queryEnabled }: RemoteOptionsContainerP
       if (stringOptions?.length) {
         const options = [];
         for (const stringOption of stringOptions) {
-          options.push({
-            label: stringOption,
-            value: stringOption,
-          });
+          if (typeof stringOption === 'object' && stringOption !== null && 'value' in stringOption && 'label' in stringOption) {
+            options.push(stringOption);
+          } else {
+            options.push({
+              label: stringOption,
+              value: stringOption,
+            });
+          }
         }
         _options = options;
       }
